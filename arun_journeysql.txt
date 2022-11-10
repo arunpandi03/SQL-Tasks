@@ -1,0 +1,46 @@
+create table STATION(ID int PRIMARY KEY, STATION_NAME varchar(80))
+
+insert into STATION values(1,'chennai')
+insert into STATION values(2,'Egmore')
+insert into STATION values(3,'Nugabakam ')
+
+select * from STATION
+
+create table JOURNEY(J_ID int primary key ,STARTING_POINT int references STATION(ID),ENDING_POINT int references STATION(ID),DISTANCE int, REACHING_TIMING int,trip varchar(80));
+select * from JOURNEY 
+drop table JOURNEY
+insert into JOURNEY values (01,1,2,10,10,'chennai -egmore')
+insert into JOURNEY values (02,1,3,30,10,'chennai-Nugabakam')
+insert into JOURNEY values (03,2,1,40,10,'egmore-chennai')
+insert into JOURNEY values (04,2,3,50,30,'egmore-Nugabakam')
+insert into JOURNEY values (05,3,1,10,40,'nugabakkam-chennai')
+insert into JOURNEY values(06,3,2,20,50,'nugambakkam-egmore')
+
+
+
+select * from STATION join JOURNEY on STATION.ID = JOURNEY.STARTING_POINT
+select * from STATION join JOURNEY on STATION.ID = JOURNEY.ENDING_POINT
+select * from STATION join JOURNEY on STATION.ID = JOURNEY.STARTING_POINT where J_ID = 3
+select * from STATION join JOURNEY on STATION.ID = JOURNEY.STARTING_POINT where DISTANCE > 30
+select * from STATION join JOURNEY on STATION.ID = JOURNEY.STARTING_POINT where  trip = "egmore-Nugabakam"
+select * from STATION join JOURNEY on STATION.ID = JOURNEY.ENDING_POINT where STARTING_POINT =3
+select STATION_NAME  from STATION join JOURNEY on STATION.ID = JOURNEY.STARTING_POINT
+select  ID,trip ,DISTANCE from STATION join JOURNEY on STATION.ID = JOURNEY.STARTING_POINT where  trip = "egmore-Nugabakam"
+select * from STATION join JOURNEY on STATION.ID = JOURNEY.ENDING_POINT
+
+
+
+
+ 
+select STARTING_POINT,ENDING_POINT,trip,DISTANCE,REACHING_TIMING from STATION join JOURNEY  where J_ID = 2
+
+
+
+
+
+
+
+  
+  
+
+
