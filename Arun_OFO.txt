@@ -1,0 +1,30 @@
+create table ARUN_LOGIN(user_id int primary key,user_name varchar(20),user_password varchar(20))
+insert into ARUN_LOGIN values(111,'arun','an12345')
+insert into ARUN_LOGIN values(112,'pandi','as12345')
+select * from ARUN_LOGIN
+
+
+
+
+create table ARUN_MENU(menu_id int primary key,menu_name varchar(20),price float)
+insert into ARUN_MENU values(1,'idly',20)
+insert into ARUN_MENU values(2,'dosa',30)
+insert into ARUN_MENU values(3,'pongal',30)
+insert into ARUN_MENU values(4,'upma',30)
+insert into ARUN_MENU values(5,'chapati',20)
+insert into ARUN_MENU values(6,'curdrice',40)
+insert into ARUN_MENU values(7,'tomatorice',40)
+insert into ARUN_MENU values(8,'lemonrice',20)
+insert into ARUN_MENU values(9,'chickenbriyani',100)
+insert into ARUN_MENU values(10,'muttonbriyani',150)
+insert into ARUN_MENU values(11,'eggbiryani',80)
+insert into ARUN_MENU values(12,'nonvegmeal',90)
+insert into ARUN_MENU values(13,'chillychicken',70)
+insert into ARUN_MENU values(14,'chicken65',80)
+insert into ARUN_MENU values(15,'lolipop',80)
+
+select * from ARUN_MENU
+
+
+
+create table ARUN_MENU(menu_id int primary key,menu_name varchar(20),price float)_
